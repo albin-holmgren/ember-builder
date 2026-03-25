@@ -62,6 +62,7 @@ jobs:
 
       - name: Clone Ember repo
         env:
+          GH_TOKEN: ${{ secrets.STRONGER_GITHUB_TOKEN }}
           VOID_COMMIT: ${{ github.event.inputs.void_commit }}
           VOID_RELEASE: ${{ github.event.inputs.void_release }}
         run: ./get_repo.sh
@@ -125,6 +126,7 @@ jobs:
 
       - name: Clone Ember repo
         env:
+          GH_TOKEN: ${{ secrets.STRONGER_GITHUB_TOKEN }}
           VOID_COMMIT: ${{ github.event.inputs.void_commit }}
           VOID_RELEASE: ${{ github.event.inputs.void_release }}
         run: ./get_repo.sh

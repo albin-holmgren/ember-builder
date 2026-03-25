@@ -64,6 +64,7 @@ jobs:
 
       - name: Clone Ember repo
         env:
+          GH_TOKEN: ${{ secrets.STRONGER_GITHUB_TOKEN }}
           VOID_COMMIT: ${{ github.event.inputs.void_commit }}
           VOID_RELEASE: ${{ github.event.inputs.void_release }}
         run: ./get_repo.sh
@@ -133,6 +134,7 @@ jobs:
 
       - name: Clone Ember repo
         env:
+          GH_TOKEN: ${{ secrets.STRONGER_GITHUB_TOKEN }}
           VOID_COMMIT: ${{ github.event.inputs.void_commit }}
           VOID_RELEASE: ${{ github.event.inputs.void_release }}
         run: ./get_repo.sh
@@ -228,6 +230,7 @@ jobs:
         env:
           npm_config_arch: ${{ matrix.npm_arch }}
           npm_config_target_arch: ${{ matrix.npm_arch }}
+          GH_TOKEN: ${{ secrets.STRONGER_GITHUB_TOKEN }}
         run: ./build/linux/package.sh
         if: env.SHOULD_BUILD == 'yes'
 

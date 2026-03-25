@@ -26,7 +26,11 @@ mkdir -p vscode
 cd vscode || { echo "'vscode' dir not found"; exit 1; }
 
 git init -q
-git remote add origin https://github.com/albin-holmgren/Aventir-Ember.git
+if [[ -n "${GH_TOKEN}" ]]; then
+  git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/albin-holmgren/Aventir-Ember.git"
+else
+  git remote add origin "https://github.com/albin-holmgren/Aventir-Ember.git"
+fi
 
 if [[ -n "${VOID_COMMIT}" ]]; then
   echo "Using explicit commit ${VOID_COMMIT}"
