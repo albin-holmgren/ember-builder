@@ -1,0 +1,23 @@
+# Ember VOID_VERSION
+
+See https://aventir.ai for Ember's official download page.
+
+# Binaries
+
+## Windows
+- <a href="https://github.com/albin-holmgren/ember-binaries/releases/download/RELEASE_VERSION/EmberSetup-x64-RELEASE_VERSION.exe">Windows (x64)</a>
+- <a href="https://github.com/albin-holmgren/ember-binaries/releases/download/RELEASE_VERSION/EmberSetup-arm64-RELEASE_VERSION.exe">Windows (ARM)</a>
+
+## Mac
+- <a href="https://github.com/albin-holmgren/ember-binaries/releases/download/RELEASE_VERSION/Ember.x64.RELEASE_VERSION.dmg">Mac (x64 / Intel)</a>
+- <a href="https://github.com/albin-holmgren/ember-binaries/releases/download/RELEASE_VERSION/Ember.arm64.RELEASE_VERSION.dmg">Mac (ARM / M Chip)</a>
+
+## Linux
+- <a href="https://github.com/albin-holmgren/ember-binaries/releases/download/RELEASE_VERSION/Ember-linux-x64-RELEASE_VERSION.tar.gz">Linux .tar.gz (x64)</a>
+- <a href="https://github.com/albin-holmgren/ember-binaries/releases/download/RELEASE_VERSION/ember_RELEASE_VERSION_amd64.deb">Linux .deb (AMD)</a>
+- <a href="https://github.com/albin-holmgren/ember-binaries/releases/download/RELEASE_VERSION/ember_RELEASE_VERSION_arm64.deb">Linux .deb (ARM)</a>
+
+## Status
+If any downloads give a 404, this version is likely very new. Try the previous version until the workflows complete!
+
+[![stable-windows](https://github.com/albin-holmgren/ember-builder/actions/workflows/stable-windows.yml/badge.svg)](https://github.com/albin-holmgren/ember-builder/actions/workflows/stable-windows.yml) [![stable-macos](https://github.com/albin-holmgren/ember-builder/actions/workflows/stable-macos.yml/badge.svg)](https://github.com/albin-holmgren/ember-builder/actions/workflows/stable-macos.yml) [![stable-linux](https://github.com/albin-holmgren/ember-builder/actions/workflows/stable-linux.yml/badge.svg)](https://github.com/albin-holmgren/ember-builder/actions/workflows/stable-linux.yml)

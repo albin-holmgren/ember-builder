@@ -1,0 +1,7 @@
+vscode/
+assets/
+*.tar.gz
+*.bak
+node_modules/
+ember-versions/
+ember-binaries/
