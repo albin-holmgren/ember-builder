@@ -137,7 +137,7 @@ fi
 
 cd "${REPOSITORY_NAME}" || { echo "'${REPOSITORY_NAME}' dir not found"; exit 1; }
 
-git pull origin main
+git pull origin main 2>/dev/null || true
 git add .
 
 CHANGES=$( git status --porcelain )
