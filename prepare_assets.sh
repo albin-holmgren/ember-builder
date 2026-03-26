@@ -140,6 +140,9 @@ else
     SHOULD_BUILD_APPIMAGE="no"
   fi
 
+  # Hard disable AppImage for now as it requires extra build scripts
+  SHOULD_BUILD_APPIMAGE="no"
+
   if [[ "${SHOULD_BUILD_DEB}" != "no" || "${SHOULD_BUILD_APPIMAGE}" != "no" ]]; then
     npm run gulp "vscode-linux-${VSCODE_ARCH}-prepare-deb"
     npm run gulp "vscode-linux-${VSCODE_ARCH}-build-deb"
