@@ -220,8 +220,8 @@ jobs:
         run: ./check_tags.sh
         if: env.SHOULD_BUILD == 'yes'
 
-      - name: Install libkrb5-dev
-        run: sudo apt-get update -y && sudo apt-get install -y libkrb5-dev
+      - name: Install native build dependencies
+        run: sudo apt-get update -y && sudo apt-get install -y libkrb5-dev libx11-dev libxkbfile-dev libsecret-1-dev libgbm-dev
         if: env.SHOULD_BUILD == 'yes'
 
       - name: Download vscode artifact
