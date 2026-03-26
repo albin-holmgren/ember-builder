@@ -120,15 +120,7 @@ elif [[ "${OS_NAME}" == "windows" ]]; then
   VERSION_PATH="${VSCODE_QUALITY}/win32/${VSCODE_ARCH}/archive"
   updateLatestVersion
 
-  if [[ "${VSCODE_ARCH}" == "ia32" || "${VSCODE_ARCH}" == "x64" ]]; then
-    ASSET_NAME="${APP_NAME}-${VSCODE_ARCH}-${RELEASE_VERSION}.msi"
-    VERSION_PATH="${VSCODE_QUALITY}/win32/${VSCODE_ARCH}/msi"
-    updateLatestVersion
-
-    ASSET_NAME="${APP_NAME}-${VSCODE_ARCH}-updates-disabled-${RELEASE_VERSION}.msi"
-    VERSION_PATH="${VSCODE_QUALITY}/win32/${VSCODE_ARCH}/msi-updates-disabled"
-    updateLatestVersion
-  fi
+  # MSI builds are disabled — skip msi/msi-updates-disabled version entries
 else
   ASSET_NAME="${APP_NAME}-linux-${VSCODE_ARCH}-${RELEASE_VERSION}.tar.gz"
   VERSION_PATH="${VSCODE_QUALITY}/linux/${VSCODE_ARCH}"
