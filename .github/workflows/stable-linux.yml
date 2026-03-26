@@ -21,12 +21,12 @@ on:
   repository_dispatch:
     types: [stable]
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
     - '**/*.md'
     - 'upstream/*.json'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
     - '**/*.md'
 
@@ -218,6 +218,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./check_tags.sh
+        if: env.SHOULD_BUILD == 'yes'
+
+      - name: Install libkrb5-dev
+        run: sudo apt-get update -y && sudo apt-get install -y libkrb5-dev
         if: env.SHOULD_BUILD == 'yes'
 
       - name: Download vscode artifact
